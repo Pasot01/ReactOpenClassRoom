@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cours React OpenClassRoom</title>
+    <style>
+        h1 {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="root">Bonjour OpenClassRoom</div>
+
+    <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+    <!-- Biblio pour ES6+ -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script type="text/babel">
+        // ##### Convention de codage 1 #####
+        // ReactDOM.render(
+        //     <div>Mon premier composant React</div>,
+        //     document.getElementById('root')
+        // )
+
+        // ##### Convention de codage 2 #####
+        function MyComponent() {
+            return <h1>Mon premier composant React</h1>
+        }
+        ReactDOM.render(<MyComponent />, document.getElementById('root'))
+    </script>
+</body>
+
+</html>
