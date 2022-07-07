@@ -28,9 +28,13 @@
         // )
 
         // ##### Convention de codage 2 #####
-        function MyComponent() {
-            return <h1>Mon premier composant React</h1>
-        }
+        // function MyComponent() {
+        //     return <h1>Mon premier composant React</h1>
+        // }
+        // ReactDOM.render(<MyComponent />, document.getElementById('root'))
+
+        // ##### Convention de codage 3 #####
+        const MyComponent = () => (<h1>Mon premier composant React</h1>)     
         ReactDOM.render(<MyComponent />, document.getElementById('root'))
     </script>
 </body>
