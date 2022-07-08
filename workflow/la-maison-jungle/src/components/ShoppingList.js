@@ -1,25 +1,6 @@
-// const plantList = [
-//     'monstera',
-//     'ficus lyrata',
-//     'pothos argenté',
-//     'yucca',
-//     'palmier'
-// ]
-
-// function ShoppingList() {
-//     return (
-//         <ul>
-//             {
-//                 plantList.map((plant, index) => (
-//                     <li key={`${plant}-${index}`}>{plant}</li>
-//                 ))
-//             }
-//         </ul>
-//     )
-// }
-// export default ShoppingList
-
 import { plantList } from '../datas/plantList'
+import PlantItem from './PlantItem'
+import '../styles/ShoppingList.css'
 
 function ShoppingList() {
     const categories = plantList.reduce(
@@ -27,6 +8,23 @@ function ShoppingList() {
             acc.includes(plant.category) ? acc : acc.concat(plant.category),
         []
     )
+    // return (
+    //     <div>
+    //         <ul>
+    //             {categories.map((cat) => (
+    //                 <li key={cat}>{cat}</li>
+    //             ))}
+    //         </ul>
+    //         <ul className="lmj-plant-list">
+    //             {plantList.map((plant) => (
+    //                 <li key={plant.id} className="lmj-plant-item">{plant.name}
+    //                     {plant.isBestSale && <span>🔥</span>}
+    //                     {plant.isSpecialOffer && <div className="lmj-sales">Solde</div>}
+    //                 </li>
+    //             ))}
+    //         </ul>
+    //     </div>
+    // )
     return (
         <div>
             <ul>
@@ -34,9 +32,15 @@ function ShoppingList() {
                     <li key={cat}>{cat}</li>
                 ))}
             </ul>
-            <ul>
-                {plantList.map((plant) => (
-                    <li key={plant.id}>{plant.name}</li>
+            <ul className='lmj-plant-list'>
+                {plantList.map(({ id, cover, name, water, light }) => (
+                    <PlantItem
+                        id={id}
+                        cover={cover}
+                        name={name}
+                        water={water}
+                        light={light}
+                    />
                 ))}
             </ul>
         </div>
