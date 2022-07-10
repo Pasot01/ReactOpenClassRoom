@@ -8,23 +8,7 @@ function ShoppingList() {
             acc.includes(plant.category) ? acc : acc.concat(plant.category),
         []
     )
-    // return (
-    //     <div>
-    //         <ul>
-    //             {categories.map((cat) => (
-    //                 <li key={cat}>{cat}</li>
-    //             ))}
-    //         </ul>
-    //         <ul className="lmj-plant-list">
-    //             {plantList.map((plant) => (
-    //                 <li key={plant.id} className="lmj-plant-item">{plant.name}
-    //                     {plant.isBestSale && <span>🔥</span>}
-    //                     {plant.isSpecialOffer && <div className="lmj-sales">Solde</div>}
-    //                 </li>
-    //             ))}
-    //         </ul>
-    //     </div>
-    // )
+
     return (
         <div>
             <ul>
