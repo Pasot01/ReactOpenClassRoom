@@ -6,6 +6,7 @@ import Survey from './pages/Survey/survey';
 import Results from './pages/Results/result';
 import Freelances from './pages/Freelances/freelance';
 import Header from './components/Header/header';
+import Footer from './components/Footer/footer';
 import Error from './components/Error/error';
 
 export default function App() {
@@ -19,6 +20,7 @@ export default function App() {
                 <Route path="/freelances" element={<Freelances />} />
                 <Route path="*" element={<Error />} />
             </Routes>
+            <Footer />
         </>
     );
 }

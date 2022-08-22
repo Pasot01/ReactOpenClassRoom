@@ -2,23 +2,27 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import { BrowserRouter } from 'react-router-dom'
 import App from './App';
-import { createGlobalStyle } from 'styled-components';
+// import { createGlobalStyle } from 'styled-components';
+import GlobalStyle from './styles/GlobalStyle';
+import { ThemeProvider } from './utils/context/cont';
 
-const GlobalStyle = createGlobalStyle`
-    * {
-      font-family: 'Trebuchet MS', Helvetica, sans-serif;
-    }
-    body {
-      margin: 0;
-    }
-`
+// const GlobalStyle = createGlobalStyle`
+//     * {
+//       font-family: 'Trebuchet MS', Helvetica, sans-serif;
+//     }
+//     body {
+//       margin: 0;
+//     }
+// `
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <BrowserRouter>
-      <GlobalStyle />
+      <ThemeProvider>
+        <GlobalStyle />
         <App />
+      </ThemeProvider>
     </BrowserRouter>
   </React.StrictMode>
 );
